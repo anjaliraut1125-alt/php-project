@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>PHP START [14-03-2026]</h1>
-    
+
     <?php
 
      echo "Hello PHP [14-03-2026]<br><br>";

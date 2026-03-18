@@ -1,0 +1,545 @@
+ <header class="ps-header ps-header--3">
+           
+
+                
+            <div class="ps-header__top">
+                <div class="container">
+                    <div class="ps-header__text"> <strong>100% Secure delivery </strong>without contacting the courier </div>
+                    <div class="ps-top__right">
+                        <div class="ps-language-currency"><a class="ps-dropdown-value" href="javascript:void(0);" data-toggle="modal" data-target="#popupLanguage">English</a><a class="ps-dropdown-value" href="javascript:void(0);" data-toggle="modal" data-target="#popupCurrency">USD</a></div>
+                        <div class="ps-top__social">
+                            <ul class="ps-social">
+                                <li><a class="ps-social__link facebook" href="#"><i class="fa fa-facebook"> </i><span class="ps-tooltip">Facebook</span></a></li>
+                                <li><a class="ps-social__link instagram" href="#"><i class="fa fa-instagram"></i><span class="ps-tooltip">Instagram</span></a></li>
+                                <li><a class="ps-social__link youtube" href="#"><i class="fa fa-youtube-play"></i><span class="ps-tooltip">Youtube</span></a></li>
+                                <li><a class="ps-social__link pinterest" href="#"><i class="fa fa-pinterest-p"></i><span class="ps-tooltip">Pinterest</span></a></li>
+                                <li><a class="ps-social__link linkedin" href="#"><i class="fa fa-linkedin"></i><span class="ps-tooltip">Linkedin</span></a></li>
+                            </ul>
+                        </div>
+                        <ul class="menu-top">
+                            <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Order Tracking</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog-sidebar1.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                        </ul>
+                        <div class="ps-header__text">Need help? <strong>0020 500 - MYMEDI - 000</strong></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ps-header__middle">
+                <div class="container">
+                    <div class="ps-logo"><a href="index.html"> <img src="img/logo.png" alt=""><img class="sticky-logo" src="img/sticky-logo.png" alt=""></a></div><a class="ps-menu--sticky" href="#"><i class="fa fa-bars"></i></a>
+                    <div class="ps-header__right">
+                        <ul class="ps-header__icons">
+                            <li><a class="ps-header__item" href="#" id="login-modal"><i class="icon-user"></i></a>
+                                <div class="ps-login--modal">
+                                    <form method="get" action="do_action">
+                                        <div class="form-group">
+                                            <label>Username or Email Address</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input class="form-control" type="password">
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label>Remember Me</label>
+                                        </div>
+                                        <button class="ps-btn ps-btn--warning" type="submit">Log In</button>
+                                    </form>
+                                </div>
+                            </li>
+                            <li><a class="ps-header__item" href="wishlist.html"><i class="fa fa-heart-o"></i><span class="badge">3</span></a></li>
+                            <li><a class="ps-header__item" href="#" id="cart-mini"><i class="icon-cart-empty"></i><span class="badge">2</span></a>
+                                <div class="ps-cart--mini">
+                                    <ul class="ps-cart__items">
+                                        <li class="ps-cart__item">
+                                            <div class="ps-product--mini-cart"><a class="ps-product__thumbnail" href="product-default.html"><img src="img/products/055.jpg" alt="alt"></a>
+                                                <div class="ps-product__content"><a class="ps-product__name" href="product-default.html">Somersung Sonic X2500 Pro White</a>
+                                                    <p class="ps-product__meta"> <span class="ps-product__price">$399.99</span></p>
+                                                </div><a class="ps-product__remove" href="javascript: void(0)"><i class="icon-cross"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="ps-cart__item">
+                                            <div class="ps-product--mini-cart"><a class="ps-product__thumbnail" href="product-default.html"><img src="img/products/001.jpg" alt="alt"></a>
+                                                <div class="ps-product__content"><a class="ps-product__name" href="product-default.html">Digital Thermometer X30-Pro</a>
+                                                    <p class="ps-product__meta"> <span class="ps-product__sale">$77.65</span><span class="ps-product__is-price">$80.65</span></p>
+                                                </div><a class="ps-product__remove" href="javascript: void(0)"><i class="icon-cross"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="ps-cart__total"><span>Subtotal </span><span>$399</span></div>
+                                    <div class="ps-cart__footer"><a class="ps-btn ps-btn--outline" href="shopping-cart.html">View Cart</a><a class="ps-btn ps-btn--warning" href="checkout.html">Checkout</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="ps-language-currency"><a class="ps-dropdown-value" href="javascript:void(0);" data-toggle="modal" data-target="#popupLanguage">English</a><a class="ps-dropdown-value" href="javascript:void(0);" data-toggle="modal" data-target="#popupCurrency">USD</a></div>
+                        <div class="ps-middle__social">
+                            <ul class="ps-social">
+                                <li><a class="ps-social__link facebook" href="#"><i class="fa fa-facebook"> </i><span class="ps-tooltip">Facebook</span></a></li>
+                                <li><a class="ps-social__link instagram" href="#"><i class="fa fa-instagram"></i><span class="ps-tooltip">Instagram</span></a></li>
+                                <li><a class="ps-social__link youtube" href="#"><i class="fa fa-youtube-play"></i><span class="ps-tooltip">Youtube</span></a></li>
+                                <li><a class="ps-social__link pinterest" href="#"><i class="fa fa-pinterest-p"></i><span class="ps-tooltip">Pinterest</span></a></li>
+                                <li><a class="ps-social__link linkedin" href="#"><i class="fa fa-linkedin"></i><span class="ps-tooltip">Linkedin</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="ps-header__menu">
+                            <ul class="menu">
+                                <li class="has-mega-menu"><a href="#"> <i class="fa fa-bars"></i>Products<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span></a>
+                                    <div class="mega-menu">
+                                        <div class="container">
+                                            <div class="mega-menu__row">
+                                                <div class="mega-menu__column">
+                                                    <h4>Main NavBar
+                                                        
+                                                    </h4>
+                                                    <ul class="sub-menu--mega">
+                                                        <li><a href="index.html">Home </a></li>
+                                                        <li><a href="about-us.html">About-Us </a></li>
+                                                        <li><a href="contact-us.html">Contact-Us</a></li>
+                                                        <li><a href="blog-us.html">Blog</a></li>
+                                                        <li><a href="product1.html">Product</a></li>
+                                                        <li><a href="my-account.html">My Account</a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ps-header__search">
+                            <form action="do_action" method="post">
+                                <div class="ps-search-table">
+                                    <div class="input-group">
+                                        <input class="form-control ps-input" type="text" placeholder="Search for products">
+                                        <div class="input-group-append"><a href="#"><i class="fa fa-search"></i></a></div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="ps-search--result">
+                                <div class="ps-result__content">
+                                    <div class="row m-0">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="ps-product ps-product--horizontal">
+                                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                        <figure><img src="img/products/052.jpg" alt="alt"></figure>
+                                                    </a></div>
+                                                <div class="ps-product__content">
+                                                    <h5 class="ps-product__title"><a>3-layer <span class='hightlight'>mask</span> with an elastic band (1 piece)</a></h5>
+                                                    <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                    <div class="ps-product__meta"><span class="ps-product__price">$38.24</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="ps-product ps-product--horizontal">
+                                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                        <figure><img src="img/products/033.jpg" alt="alt"></figure>
+                                                    </a></div>
+                                                <div class="ps-product__content">
+                                                    <h5 class="ps-product__title"><a>3 Layer Disposable Protective Face <span class='hightlight'>mask</span>s</a></h5>
+                                                    <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                    <div class="ps-product__meta"><span class="ps-product__price sale">$14.52</span><span class="ps-product__del">$17.24</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="ps-product ps-product--horizontal">
+                                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                        <figure><img src="img/products/051.jpg" alt="alt"></figure>
+                                                    </a></div>
+                                                <div class="ps-product__content">
+                                                    <h5 class="ps-product__title"><a>3-Ply Ear-Loop Disposable Blue Face <span class='hightlight'>mask</span></a></h5>
+                                                    <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                    <div class="ps-product__meta"><span class="ps-product__price sale">$14.99</span><span class="ps-product__del">$38.24</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="ps-product ps-product--horizontal">
+                                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                        <figure><img src="img/products/050.jpg" alt="alt"></figure>
+                                                    </a></div>
+                                                <div class="ps-product__content">
+                                                    <h5 class="ps-product__title"><a>Disposable Face <span class='hightlight'>mask</span> for Unisex</a></h5>
+                                                    <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                    <div class="ps-product__meta"><span class="ps-product__price sale">$8.15</span><span class="ps-product__del">$12.24</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-result__viewall"><a href="product-result.html">View all 5 results</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ps-header3-search-mobile">
+                    <div class="container">
+                        <div class="ps-search__content">
+                            <div class="ps-menu__sticky"><a class="menu-slide" href="#"><i class="fa fa-bars"></i>Products</a></div>
+                            <div class="ps-header__menu">
+                                <ul class="menu">
+                                    <li class="has-mega-menu"><a href="#"> <i class="fa fa-bars"></i>Products<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span></a>
+                                        <div class="mega-menu">
+                                            <div class="container">
+                                                <div class="mega-menu__row">
+                                                    <div class="mega-menu__column">
+                                                        <h4>Category</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="promo-category.html">Promo Category</a></li>
+                                                            <li><a href="category-grid.html">Grid</a></li>
+                                                            <li><a href="category-grid-detail.html">Grid with details</a></li>
+                                                            <li><a href="category-grid-green.html">Grid with header green</a></li>
+                                                            <li><a href="category-grid-dark.html">Grid with header dark</a></li>
+                                                            <li><a href="category-grid-separate.html">Grid separate</a></li>
+                                                            <li><a href="category-list.html">List</a></li>
+                                                            <li><a href="category-loading-infinity.html">Loading Infinity</a></li>
+                                                            <li><a href="category-load-more.html">Load more button</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Pages</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="404.html">404</a></li>
+                                                            <li><a href="about-us.html">About us</a></li>
+                                                            <li><a href="contact-us.html">Contact us</a></li>
+                                                            <li><a href="portfolio.html">Portfolio</a></li>
+                                                            <li><a href="portfolio-detail.html">Porfolio Detail</a></li>
+                                                            <li><a href="my-account.html">My Account</a></li>
+                                                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                                            <li><a href="coming-soon-v1.html">Coming soon 1</a></li>
+                                                            <li><a href="coming-soon-v2.html">Coming soon 2</a></li>
+                                                            <li><a href="product-result.html">Product Result</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Product</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="product1.html">Layout 01</a></li>
+                                                            <li><a href="product2.html">Layout 02</a></li>
+                                                            <li><a href="product3.html">Layout 03</a></li>
+                                                            <li><a href="product4.html">Layout 04</a></li>
+                                                            <li><a href="product5.html">Layout 05</a></li>
+                                                            <li><a href="product6.html">Layout 06</a></li>
+                                                            <li><a href="product7.html">Layout 07</a></li>
+                                                            <li><a href="product-variable.html">Product variable</a></li>
+                                                            <li><a href="product-sold-out.html">Product sold out</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Blog</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="blog-sidebar1.html">Blog sidebar 1</a></li>
+                                                            <li><a href="blog-sidebar2.html">Blog sidebar 2</a></li>
+                                                            <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                                            <li><a href="blog-post1.html">Blog post 1</a></li>
+                                                            <li><a href="blog-post2.html">Blog post 2</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Home</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="index.html">Home 01</a></li>
+                                                            <li><a href="home2.html">Home 02</a></li>
+                                                            <li><a href="home3.html">Home 03</a></li>
+                                                            <li><a href="home4.html">Home 04</a></li>
+                                                            <li><a href="home5.html">Home 05</a></li>
+                                                            <li><a href="home6.html">Home 06</a></li>
+                                                            <li><a href="home7.html">Home 07</a></li>
+                                                            <li><a href="home8.html">Home 08<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home9.html">Home 09<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home10.html">Home 10<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home11.html">Home 11<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home12.html">Home 12<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home13.html">Home 13<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home14.html">Home 14<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home15.html">Home 15<span class="has-badge">New</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ps-header__search">
+                                <form action="do_action" method="post">
+                                    <div class="ps-search-table">
+                                        <div class="input-group">
+                                            <input class="form-control ps-input" type="text" placeholder="Search for products">
+                                            <div class="input-group-append"><a href="#"><i class="fa fa-search"></i></a></div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="ps-search--result">
+                                    <div class="ps-result__content">
+                                        <div class="row m-0">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/052.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>3-layer <span class='hightlight'>mask</span> with an elastic band (1 piece)</a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price">$38.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/033.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>3 Layer Disposable Protective Face <span class='hightlight'>mask</span>s</a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price sale">$14.52</span><span class="ps-product__del">$17.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/051.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>3-Ply Ear-Loop Disposable Blue Face <span class='hightlight'>mask</span></a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price sale">$14.99</span><span class="ps-product__del">$38.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/050.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>Disposable Face <span class='hightlight'>mask</span> for Unisex</a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price sale">$8.15</span><span class="ps-product__del">$12.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ps-result__viewall"><a href="product-result.html">View all 5 results</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ps-navigation__left">
+                        <nav class="ps-main-menu">
+                            <ul class="menu">
+
+                                
+                                <li class="has-mega-menu"><a href="index.php">Home</a></li>
+                                <li class="has-mega-menu"><a href="blog-us.php">Blog</a></li>
+                                <li class="has-mega-menu"><a href="contact-us.php">Contact</a></li>
+                                <li class="has-mega-menu"><a href="about-us.php">About-Us</a></li>
+                                <li class="has-mega-menu"><a href="my-account.php">My Account</a></li>
+                                <li class="has-mega-menu"><a href="product1.php">Our Product</a></li>
+
+                          
+
+                            </ul>
+                        </nav>
+            </div>
+        </header>
+        <header class="ps-header ps-header--3 ps-header--mobile">
+            <div class="ps-noti">
+                <div class="container">
+                    <p class="m-0">Due to the <strong>COVID 19 </strong>epidemic, orders may be processed with a slight delay</p>
+                </div><a class="ps-noti__close"><i class="icon-cross"></i></a>
+            </div>
+            <div class="ps-header__middle">
+                <div class="container">
+                    <div class="ps-logo"><a href="index.html"> <img src="img/mobile-logo.png" alt=""></a></div>
+                    <div class="ps-header__right">
+                        <ul class="ps-header__icons">
+                            <li><a class="ps-header__item" href="#"><i class="icon-user"></i></a></li>
+                            <li><a class="ps-header__item" href="#"><i class="fa fa-heart-o"></i><span class="badge">3</span></a></li>
+                            <li><a class="ps-header__item" href="shopping-cart.html"><i class="icon-cart-empty"></i><span class="badge">2</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ps-header3-search-mobile">
+                    <div class="container">
+                        <div class="ps-search__content">
+                            <div class="ps-menu__sticky"><a class="menu-slide" href="#"><i class="fa fa-bars"></i>Products</a></div>
+                            <div class="ps-header__menu">
+                                <ul class="menu">
+                                    <li class="has-mega-menu"><a href="#"> <i class="fa fa-bars"></i>Products<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span></a>
+                                        <div class="mega-menu">
+                                            <div class="container">
+                                                <div class="mega-menu__row">
+                                                    <div class="mega-menu__column">
+                                                        <h4>Category</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="promo-category.html">Promo Category</a></li>
+                                                            <li><a href="category-grid.html">Grid</a></li>
+                                                            <li><a href="category-grid-detail.html">Grid with details</a></li>
+                                                            <li><a href="category-grid-green.html">Grid with header green</a></li>
+                                                            <li><a href="category-grid-dark.html">Grid with header dark</a></li>
+                                                            <li><a href="category-grid-separate.html">Grid separate</a></li>
+                                                            <li><a href="category-list.html">List</a></li>
+                                                            <li><a href="category-loading-infinity.html">Loading Infinity</a></li>
+                                                            <li><a href="category-load-more.html">Load more button</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Pages</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="404.html">404</a></li>
+                                                            <li><a href="about-us.html">About us</a></li>
+                                                            <li><a href="contact-us.html">Contact us</a></li>
+                                                            <li><a href="portfolio.html">Portfolio</a></li>
+                                                            <li><a href="portfolio-detail.html">Porfolio Detail</a></li>
+                                                            <li><a href="my-account.html">My Account</a></li>
+                                                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                                            <li><a href="coming-soon-v1.html">Coming soon 1</a></li>
+                                                            <li><a href="coming-soon-v2.html">Coming soon 2</a></li>
+                                                            <li><a href="product-result.html">Product Result</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Product</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="product1.html">Layout 01</a></li>
+                                                            <li><a href="product2.html">Layout 02</a></li>
+                                                            <li><a href="product3.html">Layout 03</a></li>
+                                                            <li><a href="product4.html">Layout 04</a></li>
+                                                            <li><a href="product5.html">Layout 05</a></li>
+                                                            <li><a href="product6.html">Layout 06</a></li>
+                                                            <li><a href="product7.html">Layout 07</a></li>
+                                                            <li><a href="product-variable.html">Product variable</a></li>
+                                                            <li><a href="product-sold-out.html">Product sold out</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Blog</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="blog-sidebar1.html">Blog sidebar 1</a></li>
+                                                            <li><a href="blog-sidebar2.html">Blog sidebar 2</a></li>
+                                                            <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                                            <li><a href="blog-post1.html">Blog post 1</a></li>
+                                                            <li><a href="blog-post2.html">Blog post 2</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-menu__column">
+                                                        <h4>Home</h4>
+                                                        <ul class="sub-menu--mega">
+                                                            <li><a href="index.html">Home 01</a></li>
+                                                            <li><a href="home2.html">Home 02</a></li>
+                                                            <li><a href="home3.html">Home 03</a></li>
+                                                            <li><a href="home4.html">Home 04</a></li>
+                                                            <li><a href="home5.html">Home 05</a></li>
+                                                            <li><a href="home6.html">Home 06</a></li>
+                                                            <li><a href="home7.html">Home 07</a></li>
+                                                            <li><a href="home8.html">Home 08<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home9.html">Home 09<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home10.html">Home 10<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home11.html">Home 11<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home12.html">Home 12<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home13.html">Home 13<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home14.html">Home 14<span class="has-badge">New</span></a></li>
+                                                            <li><a href="home15.html">Home 15<span class="has-badge">New</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ps-header__search">
+                                <form action="do_action" method="post">
+                                    <div class="ps-search-table">
+                                        <div class="input-group">
+                                            <input class="form-control ps-input" type="text" placeholder="Search for products">
+                                            <div class="input-group-append"><a href="#"><i class="fa fa-search"></i></a></div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="ps-search--result">
+                                    <div class="ps-result__content">
+                                        <div class="row m-0">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/052.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>3-layer <span class='hightlight'>mask</span> with an elastic band (1 piece)</a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price">$38.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/033.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>3 Layer Disposable Protective Face <span class='hightlight'>mask</span>s</a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price sale">$14.52</span><span class="ps-product__del">$17.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/051.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>3-Ply Ear-Loop Disposable Blue Face <span class='hightlight'>mask</span></a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price sale">$14.99</span><span class="ps-product__del">$38.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="ps-product ps-product--horizontal">
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
+                                                            <figure><img src="img/products/050.jpg" alt="alt"></figure>
+                                                        </a></div>
+                                                    <div class="ps-product__content">
+                                                        <h5 class="ps-product__title"><a>Disposable Face <span class='hightlight'>mask</span> for Unisex</a></h5>
+                                                        <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                                                        <div class="ps-product__meta"><span class="ps-product__price sale">$8.15</span><span class="ps-product__del">$12.24</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ps-result__viewall"><a href="product-result.html">View all 5 results</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>

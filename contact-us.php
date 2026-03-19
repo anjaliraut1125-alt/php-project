@@ -64,28 +64,28 @@
                         </div>
                     </div>
                 </div>
-                <form action="do_action" method="post">
+                <form action="controlers/insert.php" method="post">
                     <div class="ps-form--contact">
                         <h2 class="ps-form__title">Fill up the form if you have any question</h2>
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <div class="ps-form__group">
-                                    <input class="form-control ps-form__input" type="text" placeholder="Name and Surname">
+                                    <input class="form-control ps-form__input" type="text" placeholder="Full Name" name="full_name">
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="ps-form__group">
-                                    <input class="form-control ps-form__input" type="email" placeholder="Your E-mail">
+                                    <input class="form-control ps-form__input" type="email" placeholder="Your E-mail" name="email">
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="ps-form__group">
-                                    <input class="form-control ps-form__input" type="text" placeholder="Phone">
+                                    <input class="form-control ps-form__input" type="text" placeholder="Phone" name="phone">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="ps-form__group">
-                                    <textarea class="form-control ps-form__textarea" rows="5" placeholder="Message"></textarea>
+                                    <textarea class="form-control ps-form__textarea" rows="5" placeholder="Message" name="message"></textarea>
                                 </div>
                             </div>
                         </div>

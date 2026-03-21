@@ -1,9 +1,10 @@
-﻿<?php
-include "includes/config.php";
+<?php
+    include "includes/config.php";
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM contacts WHERE id = $id";
 
-$sql = "SELECT * FROM contacts";
-$result = mysqli_query($conn, $sql);    
-
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
 
 ?>
 
@@ -44,165 +45,64 @@ $result = mysqli_query($conn, $sql);
 <body>
     <div class="ps-page">
         <?php
-          include "includes/header.php"
+         include "includes/header.php"
        ?>
 
-       <div class="ps-wishlist">
+
+        <div class="ps-contact">
             <div class="container">
                 <ul class="ps-breadcrumb">
                     <li class="ps-breadcrumb__item"><a href="index.html">Home</a></li>
-                    <li class="ps-breadcrumb__item active" aria-current="page">Contact</li>
+                    <li class="ps-breadcrumb__item active" aria-current="page">Edit Contact</li>
                 </ul>
-                <h3 class="ps-wishlist__title">Contact Details</h3>
-                <div class="ps-wishlist__content">
-                    <ul class="ps-wishlist__list">
-                        <li>
-                            <div class="ps-product ps-product--wishlist">
-                                <div class="ps-product__remove"><a href="#"><i class="icon-cross"></i></a></div>
-                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                        <figure><img src="img/products/001.jpg" alt="alt"><img src="img/products/009.jpg" alt="alt">
-                                        </figure>
-                                    </a></div>
-                                <div class="ps-product__content">
-                                    <h5 class="ps-product__title"><a href="product1.html">Digital Thermometer X30-Pro</a></h5>
-                                    <div class="ps-product__row">
-                                        <div class="ps-product__label">Price:</div>
-                                        <div class="ps-product__value"><span class="ps-product__price sale">$77.65</span><span class="ps-product__del">$80.65</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__stock">
-                                        <div class="ps-product__label">Stock:</div>
-                                        <div class="ps-product__value"><span class="ps-product__out-stock">Out of stock </span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__cart">
-                                        <button class="ps-btn">Add to cart</button>
-                                    </div>
-                                    <div class="ps-product__row ps-product__quantity">
-                                        <div class="ps-product__label">Quantity:</div>
-                                        <div class="ps-product__value">1</div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__subtotal">
-                                        <div class="ps-product__label">Subtotal:</div>
-                                        <div class="ps-product__value">$77.65</div>
-                                    </div>
+
+                <form action="controlers/update-contact.php" method="post">
+                    <div class="ps-form--contact">
+                        <h2 class="ps-form__title">Fill up the form if you have any question</h2>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="ps-form__group">
+                                    <input type="hidden" name="id" value="<?php echo $row['id']?>">
+                                    <input class="form-control ps-form__input" type="text" placeholder="Full Name" value="<?php echo $row['name']?>"  name="full_name" >
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="ps-product ps-product--wishlist">
-                                <div class="ps-product__remove"><a href="#"><i class="icon-cross"></i></a></div>
-                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                        <figure><img src="img/products/011.jpg" alt="alt">
-                                        </figure>
-                                    </a></div>
-                                <div class="ps-product__content">
-                                    <h5 class="ps-product__title"><a href="product1.html">Hill-Rom Affinity III Progressa iBed</a></h5>
-                                    <div class="ps-product__row">
-                                        <div class="ps-product__label">Price:</div>
-                                        <div class="ps-product__value"><span class="ps-product__price">$488.23</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__stock">
-                                        <div class="ps-product__label">Stock:</div>
-                                        <div class="ps-product__value"><span class="ps-product__in-stock">In Stock</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__cart">
-                                        <button class="ps-btn">Add to cart</button>
-                                    </div>
-                                    <div class="ps-product__row ps-product__quantity">
-                                        <div class="ps-product__label">Quantity:</div>
-                                        <div class="ps-product__value">1</div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__subtotal">
-                                        <div class="ps-product__label">Subtotal:</div>
-                                        <div class="ps-product__value">$488.23</div>
-                                    </div>
+                            <div class="col-12 col-md-4">
+                                <div class="ps-form__group">
+                                    <input class="form-control ps-form__input" type="email" placeholder="Your E-mail" value="<?php echo $row['email']?>" name="email" >
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="ps-product ps-product--wishlist">
-                                <div class="ps-product__remove"><a href="#"><i class="icon-cross"></i></a></div>
-                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                        <figure><img src="img/products/012.jpg" alt="alt"><img src="img/products/013.jpg" alt="alt">
-                                        </figure>
-                                    </a></div>
-                                <div class="ps-product__content">
-                                    <h5 class="ps-product__title"><a href="product1.html">Hill-Rom Affinity III Progressa iBed</a></h5>
-                                    <div class="ps-product__row">
-                                        <div class="ps-product__label">Price:</div>
-                                        <div class="ps-product__value"><span class="ps-product__price">$436.87</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__stock">
-                                        <div class="ps-product__label">Stock:</div>
-                                        <div class="ps-product__value"><span class="ps-product__in-stock">In Stock</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__cart">
-                                        <button class="ps-btn">Add to cart</button>
-                                    </div>
-                                    <div class="ps-product__row ps-product__quantity">
-                                        <div class="ps-product__label">Quantity:</div>
-                                        <div class="ps-product__value">1</div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__subtotal">
-                                        <div class="ps-product__label">Subtotal:</div>
-                                        <div class="ps-product__value">$436.87</div>
-                                    </div>
+                            <div class="col-12 col-md-4">
+                                <div class="ps-form__group">
+                                    <input class="form-control ps-form__input" type="text" placeholder="Phone" value="<?php echo $row['phone']?>" name="phone">
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                    <div class="ps-wishlist__table">
-                        <table class="table ps-table ps-table--product">
-                            <thead>
-                                <tr>
-                                    <th class="ps-product__remove">Id</th>
-                                    <th class="ps-product__thumbnail">FullName</th>
-                                    <th class="ps-product__name">Email</th>
-                                    <th class="ps-product__meta">Phone</th>
-                                    <th class="ps-product__status">Message</th>
-                                    <th class="ps-product__cart">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                               <?php
-                                while($row = mysqli_fetch_assoc($result)){
-                               ?>
-
-
-                                <tr>
-                                    
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['id']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['name']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['email']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['phone']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['message']?></a></td>
-
-
-
-                                    <td class="ps-product__cart">
-                                        <a href="edit-contact.php?id=<?php echo $row['id']?>" class="ps-btn">Edit</a>
-                                        <a href="" class="ps-btn">Delete</a>
-                                    </td>
-                                </tr>
-
-                                <?php
-                                }
-                                ?>
-                              
-                            </tbody>
-                        </table>
+                            <div class="col-12">
+                                <div class="ps-form__group">
+                                    <textarea class="form-control ps-form__textarea" rows="5" placeholder="Message" name="message"><?php echo $row['message']?></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ps-form__submit">
+                            <button class="ps-btn ps-btn--warning">Update Contact</button>
+                        </div>
                     </div>
-                  
-                </div>
+                </form>
+                <section class="ps-section--instagram">
+                    <h3 class="ps-section__title">Follow <strong>@MYMEDI </strong>on instagram</h3>
+                    <div class="ps-section__content">
+                        <div class="row m-0">
+                            <div class="col-6 col-md-4 col-lg-2"> <a class="ps-image--transition" href="https://www.instagram.com/p/CDf7FC7pwae/"> <img src="img/instagram/instagram1.jpg" alt=""><span class="ps-image__overlay"><i class="fa fa-instagram"></i></span></a></div>
+                            <div class="col-6 col-md-4 col-lg-2"> <a class="ps-image--transition" href="https://www.instagram.com/p/CDf7D5zJqwo/"> <img src="img/instagram/instagram2.jpg" alt=""><span class="ps-image__overlay"><i class="fa fa-instagram"></i></span></a></div>
+                            <div class="col-6 col-md-4 col-lg-2"> <a class="ps-image--transition" href="https://www.instagram.com/p/CDf7BnapGmv/"> <img src="img/instagram/instagram3.jpg" alt=""><span class="ps-image__overlay"><i class="fa fa-instagram"></i></span></a></div>
+                            <div class="col-6 col-md-4 col-lg-2"> <a class="ps-image--transition" href="https://www.instagram.com/p/CDf7Af8JWDj/"> <img src="img/instagram/instagram4.jpg" alt=""><span class="ps-image__overlay"><i class="fa fa-instagram"></i></span></a></div>
+                            <div class="col-6 col-md-4 col-lg-2"> <a class="ps-image--transition" href="https://www.instagram.com/p/CDf6_QEpWYv/"> <img src="img/instagram/instagram5.jpg" alt=""><span class="ps-image__overlay"><i class="fa fa-instagram"></i></span></a></div>
+                            <div class="col-6 col-md-4 col-lg-2"> <a class="ps-image--transition" href="https://www.instagram.com/p/CDf69FupFee/"> <img src="img/instagram/instagram6.jpg" alt=""><span class="ps-image__overlay"><i class="fa fa-instagram"></i></span></a></div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-      
+       
        <?php
             include "includes/footer.php"
         ?>

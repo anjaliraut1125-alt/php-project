@@ -33,21 +33,15 @@
                         <ul class="ps-header__icons">
                             <li><a class="ps-header__item" href="#" id="login-modal"><i class="icon-user"></i></a>
                                 <div class="ps-login--modal">
-                                    <form method="get" action="do_action">
-                                        <div class="form-group">
-                                            <label>Username or Email Address</label>
-                                            <input class="form-control" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Password</label>
-                                            <input class="form-control" type="password">
-                                        </div>
-                                        <div class="form-group form-check">
-                                            <input class="form-check-input" type="checkbox">
-                                            <label>Remember Me</label>
-                                        </div>
-                                        <button class="ps-btn ps-btn--warning" type="submit">Log In</button>
-                                    </form>
+
+                                  <a href="" class="ps-btn ps-btn--warning mb-2">Log In</a>
+                                  <a href="" class="ps-btn bg-info">Register</a>
+                                  <a href="my-account.php">MY Account</a>
+                                  <a href="">Logout</a>
+
+                                      
+                                        
+                                   
                                 </div>
                             </li>
                             <li><a class="ps-header__item" href="wishlist.html"><i class="fa fa-heart-o"></i><span class="badge">3</span></a></li>

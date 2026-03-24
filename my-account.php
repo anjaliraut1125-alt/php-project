@@ -55,107 +55,7 @@ $result = mysqli_query($conn, $sql);
                 </ul>
                 <h3 class="ps-wishlist__title">Contact Details</h3>
                 <div class="ps-wishlist__content">
-                    <ul class="ps-wishlist__list">
-                        <li>
-                            <div class="ps-product ps-product--wishlist">
-                                <div class="ps-product__remove"><a href="#"><i class="icon-cross"></i></a></div>
-                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                        <figure><img src="img/products/001.jpg" alt="alt"><img src="img/products/009.jpg" alt="alt">
-                                        </figure>
-                                    </a></div>
-                                <div class="ps-product__content">
-                                    <h5 class="ps-product__title"><a href="product1.html">Digital Thermometer X30-Pro</a></h5>
-                                    <div class="ps-product__row">
-                                        <div class="ps-product__label">Price:</div>
-                                        <div class="ps-product__value"><span class="ps-product__price sale">$77.65</span><span class="ps-product__del">$80.65</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__stock">
-                                        <div class="ps-product__label">Stock:</div>
-                                        <div class="ps-product__value"><span class="ps-product__out-stock">Out of stock </span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__cart">
-                                        <button class="ps-btn">Add to cart</button>
-                                    </div>
-                                    <div class="ps-product__row ps-product__quantity">
-                                        <div class="ps-product__label">Quantity:</div>
-                                        <div class="ps-product__value">1</div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__subtotal">
-                                        <div class="ps-product__label">Subtotal:</div>
-                                        <div class="ps-product__value">$77.65</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="ps-product ps-product--wishlist">
-                                <div class="ps-product__remove"><a href="#"><i class="icon-cross"></i></a></div>
-                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                        <figure><img src="img/products/011.jpg" alt="alt">
-                                        </figure>
-                                    </a></div>
-                                <div class="ps-product__content">
-                                    <h5 class="ps-product__title"><a href="product1.html">Hill-Rom Affinity III Progressa iBed</a></h5>
-                                    <div class="ps-product__row">
-                                        <div class="ps-product__label">Price:</div>
-                                        <div class="ps-product__value"><span class="ps-product__price">$488.23</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__stock">
-                                        <div class="ps-product__label">Stock:</div>
-                                        <div class="ps-product__value"><span class="ps-product__in-stock">In Stock</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__cart">
-                                        <button class="ps-btn">Add to cart</button>
-                                    </div>
-                                    <div class="ps-product__row ps-product__quantity">
-                                        <div class="ps-product__label">Quantity:</div>
-                                        <div class="ps-product__value">1</div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__subtotal">
-                                        <div class="ps-product__label">Subtotal:</div>
-                                        <div class="ps-product__value">$488.23</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="ps-product ps-product--wishlist">
-                                <div class="ps-product__remove"><a href="#"><i class="icon-cross"></i></a></div>
-                                <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                        <figure><img src="img/products/012.jpg" alt="alt"><img src="img/products/013.jpg" alt="alt">
-                                        </figure>
-                                    </a></div>
-                                <div class="ps-product__content">
-                                    <h5 class="ps-product__title"><a href="product1.html">Hill-Rom Affinity III Progressa iBed</a></h5>
-                                    <div class="ps-product__row">
-                                        <div class="ps-product__label">Price:</div>
-                                        <div class="ps-product__value"><span class="ps-product__price">$436.87</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__stock">
-                                        <div class="ps-product__label">Stock:</div>
-                                        <div class="ps-product__value"><span class="ps-product__in-stock">In Stock</span>
-                                        </div>
-                                    </div>
-                                    <div class="ps-product__cart">
-                                        <button class="ps-btn">Add to cart</button>
-                                    </div>
-                                    <div class="ps-product__row ps-product__quantity">
-                                        <div class="ps-product__label">Quantity:</div>
-                                        <div class="ps-product__value">1</div>
-                                    </div>
-                                    <div class="ps-product__row ps-product__subtotal">
-                                        <div class="ps-product__label">Subtotal:</div>
-                                        <div class="ps-product__value">$436.87</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                  
                     <div class="ps-wishlist__table">
                         <table class="table ps-table ps-table--product">
                             <thead>
@@ -187,7 +87,7 @@ $result = mysqli_query($conn, $sql);
 
                                     <td class="ps-product__cart">
                                         <a href="edit-contact.php?id=<?php echo $row['id']?>" class="ps-btn">Edit</a>
-                                        <a href="" class="ps-btn">Delete</a>
+                                        <a href="controlers/delete.php?id=<?php echo $row['id']?>" class="ps-btn">Delete</a>
                                     </td>
                                 </tr>
 

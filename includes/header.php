@@ -35,7 +35,7 @@
                                 <div class="ps-login--modal">
 
                                   <a href="" class="ps-btn ps-btn--warning mb-2">Log In</a>
-                                  <a href="" class="ps-btn bg-info">Register</a>
+                                  <a href="register.php" class="ps-btn bg-info">Register</a>
                                   <a href="my-account.php">MY Account</a>
                                   <a href="">Logout</a>
 
@@ -95,6 +95,8 @@
                                                         <li><a href="blog-us.html">Blog</a></li>
                                                         <li><a href="product1.html">Product</a></li>
                                                         <li><a href="my-account.html">My Account</a></li>
+                                                        
+
                                                         
                                                     </ul>
                                                 </div>

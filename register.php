@@ -1,16 +1,3 @@
-<?php
-include "includes/config.php";
-
-$sql = "SELECT * FROM contacts";
-$result = mysqli_query($conn, $sql);    
-
-
-?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,13 +55,14 @@ $result = mysqli_query($conn, $sql);
 
                 <div class="row d-flex justify-content-center ">
                     <div class="col-6 ">
-                        <form action="controlers/register.php" method="post">
+                        <form action="controlers/regi.php" method="post">
                             <div class="ps-form--contact border border-dark p-4 rounded">
                                 <h2 class="ps-form__title">Register Form</h2>
                                 <div class="row">
 
                                     <div class="col-12 col-md-12">
                                         <div class="ps-form__group">
+                                            <!-- <label class="ps-form__label">Full Name </label> -->
                                             <input class="form-control ps-form__input" type="text"
                                                 placeholder="Full Name" name="full_name">
                                         </div>

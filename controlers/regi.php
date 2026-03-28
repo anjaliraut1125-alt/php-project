@@ -15,21 +15,33 @@ $phone = $_POST['phone'];
 $sql = "INSERT INTO users(full_name , email , password , country , phone)
 VALUES('$full_name' , '$email' , '$password' , '$country' , '$phone')";
 
-if(mysqli_query($conn,$sql)){
-    // echo "Data Register Successfully.";
-    header("Location: ../my-account.php");
 
-}else{
-    echo "Data Failed!";
+
+// $email = $_POST['email'];
+
+// Check email already exists
+$check = "SELECT * FROM users WHERE email='$email'";
+$result = mysqli_query($conn, $check);
+
+if(mysqli_num_rows($result) > 0){
+    echo "Email already exists";
+} else {
+
+    $sql = "INSERT INTO users(email) VALUES('$email')";
+
+    if(mysqli_query($conn, $sql)){
+        header("Location: ../my-account.php");
+    } else {
+        echo "Data Failed!";
+    }
 }
-
-
-
-// if(mysqli_query($conn,$sql)){
-//     echo "<p style='color:green;'>Data Register Successfully</p>";
-// }else{
-//     echo "<p style='color:red;'>Email already exists!</p>";
-// }
-
-
 ?>
+
+
+
+
+
+
+
+
+

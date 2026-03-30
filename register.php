@@ -34,23 +34,14 @@
           include "includes/header.php"
        ?>
 
-        <div class="ps-wishlist">
-            <div class="container">
-                <ul class="ps-breadcrumb">
-                    <li class="ps-breadcrumb__item"><a href="index.html">Home</a></li>
-                    <li class="ps-breadcrumb__item active" aria-current="page">Register</li>
-                </ul>
-                <h3 class="ps-wishlist__title">Register Form</h3>
-
-            </div>
-        </div>
+    
 
 
         <div class="ps-contact">
             <div class="container">
                 <ul class="ps-breadcrumb">
-                    <li class="ps-breadcrumb__item"><a href="index.html">Home</a></li>
-                    <li class="ps-breadcrumb__item active" aria-current="page">Register Form</li>
+                    <li class="ps-breadcrumb__item"><a href="index.php">Home</a></li>
+                    <li class="ps-breadcrumb__item active" aria-current="page"><a href="register.php">Register Form</li>
                 </ul>
 
                 <div class="row d-flex justify-content-center ">

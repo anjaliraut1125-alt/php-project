@@ -1,24 +1,3 @@
-﻿<?php
-session_start();
-include "includes/config.php";
-
-if (!isset($_SESSION['user_id'])){
-    header("Location: login.php");
-    exit();
-
-}
-
-
-$sql = "SELECT * FROM contacts";
-$result = mysqli_query($conn, $sql);    
-
-
-?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,74 +28,62 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
 <body>
     <div class="ps-page">
-        <?php
+       <?php
           include "includes/header.php"
        ?>
-
-       <div class="ps-wishlist">
+        
+        <div class="ps-account">
             <div class="container">
-                <ul class="ps-breadcrumb">
-                    <li class="ps-breadcrumb__item"><a href="index.html">Home</a></li>
-                    <li class="ps-breadcrumb__item active" aria-current="page">Contact</li>
-                </ul>
-                <h3 class="ps-wishlist__title">Contact Details</h3>
-                <div class="ps-wishlist__content">
-                  
-                    <div class="ps-wishlist__table">
-                        <table class="table ps-table ps-table--product">
-                            <thead>
-                                <tr>
-                                    <th class="ps-product__remove">Id</th>
-                                    <th class="ps-product__thumbnail">FullName</th>
-                                    <th class="ps-product__name">Email</th>
-                                    <th class="ps-product__meta">Phone</th>
-                                    <th class="ps-product__status">Message</th>
-                                    <th class="ps-product__cart">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                               <?php
-                                while($row = mysqli_fetch_assoc($result)){
-                               ?>
-
-
-                                <tr>
-                                    
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['id']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['name']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['email']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['phone']?></a></td>
-                                    <td class="ps-product__name"> <a href="product1.html"><?php echo $row['message']?></a></td>
-
-
-
-                                    <td class="ps-product__cart">
-                                        <a href="edit-contact.php?id=<?php echo $row['id']?>" class="ps-btn">Edit</a>
-                                        <a href="controlers/delete.php?id=<?php echo $row['id']?>" class="ps-btn">Delete</a>
-                                    </td>
-                                </tr>
-
-                                <?php
-                                }
-                                ?>
-                              
-                            </tbody>
-                        </table>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6">
+                        <form action="do_action" method="post">
+                            <div class="ps-form--review border border-dark p-4 rounded">
+                                <h2 class="ps-form__title">Login Form</b></h2>
+                                <div class="ps-form__group">
+                                    <label class="ps-form__label"> Email </label>
+                                    <input class="form-control ps-form__input" type="email"
+                                        placeholder="Enter Your Email">
+                                </div>
+                                <div class="ps-form__group">
+                                    <label class="ps-form__label">Password </label>
+                                    <div class="input-group">
+                                        <input class="form-control ps-form__input" type="password"
+                                            placeholder="Enter Your password">
+                                        <div class="input-group-append"><a class="fa fa-eye-slash toogle-password"
+                                                href="javascript: vois(0);"></a></div>
+                                    </div>
+                                </div>
+                                <div class="ps-form__submit">
+                                    <button class="ps-btn ps-btn--warning">Log in</button>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="remember">
+                                        <label class="form-check-label" for="remember">Remember me</label>
+                                    </div>
+                                </div>
+                                <!-- <a class="ps-account__link" href="lost-password.html">Lost your password?</a> -->
+                            </div>
+                        </form>
                     </div>
-                  
+                
                 </div>
             </div>
         </div>
-      
-       <?php
-            include "includes/footer.php"
-        ?>
+
+        <br>
+        <br>
+
+
+        <?php
+          include "includes/footer.php"
+       ?>
     </div>
     <div class="ps-search">
-        <div class="ps-search__content ps-search--mobile"><a class="ps-search__close" href="#" id="close-search"><i class="icon-cross"></i></a>
+        <div class="ps-search__content ps-search--mobile"><a class="ps-search__close" href="#" id="close-search"><i
+                    class="icon-cross"></i></a>
             <h3>Search</h3>
             <form action="do_action" method="post">
                 <div class="ps-search-table">
@@ -133,8 +100,10 @@ $result = mysqli_query($conn, $sql);
                                 <figure><img src="img/products/052.jpg" alt="alt"></figure>
                             </a></div>
                         <div class="ps-product__content">
-                            <h5 class="ps-product__title"><a>3-layer <span class='hightlight'>mask</span> with an elastic band (1 piece)</a></h5>
-                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
+                            <h5 class="ps-product__title"><a>3-layer <span class='hightlight'>mask</span> with an
+                                    elastic band (1 piece)</a></h5>
+                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has
+                                HEALTH certificate</p>
                             <div class="ps-product__meta"><span class="ps-product__price">$38.24</span>
                             </div>
                         </div>
@@ -146,9 +115,12 @@ $result = mysqli_query($conn, $sql);
                                 <figure><img src="img/products/033.jpg" alt="alt"></figure>
                             </a></div>
                         <div class="ps-product__content">
-                            <h5 class="ps-product__title"><a>3 Layer Disposable Protective Face <span class='hightlight'>mask</span>s</a></h5>
-                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
-                            <div class="ps-product__meta"><span class="ps-product__price sale">$14.52</span><span class="ps-product__del">$17.24</span>
+                            <h5 class="ps-product__title"><a>3 Layer Disposable Protective Face <span
+                                        class='hightlight'>mask</span>s</a></h5>
+                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has
+                                HEALTH certificate</p>
+                            <div class="ps-product__meta"><span class="ps-product__price sale">$14.52</span><span
+                                    class="ps-product__del">$17.24</span>
                             </div>
                         </div>
                     </div>
@@ -159,9 +131,12 @@ $result = mysqli_query($conn, $sql);
                                 <figure><img src="img/products/051.jpg" alt="alt"></figure>
                             </a></div>
                         <div class="ps-product__content">
-                            <h5 class="ps-product__title"><a>3-Ply Ear-Loop Disposable Blue Face <span class='hightlight'>mask</span></a></h5>
-                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
-                            <div class="ps-product__meta"><span class="ps-product__price sale">$14.99</span><span class="ps-product__del">$38.24</span>
+                            <h5 class="ps-product__title"><a>3-Ply Ear-Loop Disposable Blue Face <span
+                                        class='hightlight'>mask</span></a></h5>
+                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has
+                                HEALTH certificate</p>
+                            <div class="ps-product__meta"><span class="ps-product__price sale">$14.99</span><span
+                                    class="ps-product__del">$38.24</span>
                             </div>
                         </div>
                     </div>
@@ -172,9 +147,12 @@ $result = mysqli_query($conn, $sql);
                                 <figure><img src="img/products/050.jpg" alt="alt"></figure>
                             </a></div>
                         <div class="ps-product__content">
-                            <h5 class="ps-product__title"><a>Disposable Face <span class='hightlight'>mask</span> for Unisex</a></h5>
-                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has HEALTH certificate</p>
-                            <div class="ps-product__meta"><span class="ps-product__price sale">$8.15</span><span class="ps-product__del">$12.24</span>
+                            <h5 class="ps-product__title"><a>Disposable Face <span class='hightlight'>mask</span> for
+                                    Unisex</a></h5>
+                            <p class="ps-product__desc">Study history up to 30 days Up to 5 users simultaneously Has
+                                HEALTH certificate</p>
+                            <div class="ps-product__meta"><span class="ps-product__price sale">$8.15</span><span
+                                    class="ps-product__del">$12.24</span>
                             </div>
                         </div>
                     </div>
@@ -183,16 +161,20 @@ $result = mysqli_query($conn, $sql);
         </div>
     </div>
     <div class="ps-navigation--footer">
-        <div class="ps-nav__item"><a href="#" id="open-menu"><i class="icon-menu"></i></a><a href="#" id="close-menu"><i class="icon-cross"></i></a></div>
+        <div class="ps-nav__item"><a href="#" id="open-menu"><i class="icon-menu"></i></a><a href="#" id="close-menu"><i
+                    class="icon-cross"></i></a></div>
         <div class="ps-nav__item"><a href="index.html"><i class="icon-home2"></i></a></div>
         <div class="ps-nav__item"><a href="my-account.html"><i class="icon-user"></i></a></div>
-        <div class="ps-nav__item"><a href="wishlist.html"><i class="fa fa-heart-o"></i><span class="badge">3</span></a></div>
-        <div class="ps-nav__item"><a href="shopping-cart.html"><i class="icon-cart-empty"></i><span class="badge">2</span></a></div>
+        <div class="ps-nav__item"><a href="wishlist.html"><i class="fa fa-heart-o"></i><span class="badge">3</span></a>
+        </div>
+        <div class="ps-nav__item"><a href="shopping-cart.html"><i class="icon-cart-empty"></i><span
+                    class="badge">2</span></a></div>
     </div>
     <div class="ps-menu--slidebar">
         <div class="ps-menu__content">
             <ul class="menu--mobile">
-                <li class="menu-item-has-children"><a href="#">Products</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                <li class="menu-item-has-children"><a href="#">Products</a><span class="sub-toggle"><i
+                            class="fa fa-chevron-down"></i></span>
                     <ul class="sub-menu">
                         <li><a href="#">Wound Care</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
                             <ul class="sub-menu">
@@ -216,14 +198,16 @@ $result = mysqli_query($conn, $sql);
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="#">Home Medical Supplies</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                <li class="menu-item-has-children"><a href="#">Home Medical Supplies</a><span class="sub-toggle"><i
+                            class="fa fa-chevron-down"></i></span>
                     <ul class="sub-menu">
                         <li><a href="category-list.html">Diagnosis</a></li>
                         <li><a href="category-list.html">Accessories Tools</a></li>
                         <li><a href="category-list.html">Bandages</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="#">Homepages</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                <li class="menu-item-has-children"><a href="#">Homepages</a><span class="sub-toggle"><i
+                            class="fa fa-chevron-down"></i></span>
                     <ul class="sub-menu">
                         <li><a href="index.html">Home 01</a></li>
                         <li><a href="home2.html">Home 02</a></li>
@@ -243,7 +227,8 @@ $result = mysqli_query($conn, $sql);
                     </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="category-list.html">Shop</a></li>
-                <li class="menu-item-has-children"><a href="#">Pages</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                <li class="menu-item-has-children"><a href="#">Pages</a><span class="sub-toggle"><i
+                            class="fa fa-chevron-down"></i></span>
                     <ul class="sub-menu">
                         <li><a href="#">Category</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
                             <ul class="sub-menu">
@@ -279,7 +264,8 @@ $result = mysqli_query($conn, $sql);
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="#">Collection</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                <li class="menu-item-has-children"><a href="#">Collection</a><span class="sub-toggle"><i
+                            class="fa fa-chevron-down"></i></span>
                     <ul class="sub-menu">
                         <li><a href="category-list.html">Face masks</a></li>
                         <li><a href="category-list.html">Dental</a></li>
@@ -293,13 +279,15 @@ $result = mysqli_query($conn, $sql);
         <div class="ps-menu__footer">
             <div class="ps-menu__item">
                 <ul class="ps-language-currency">
-                    <li class="menu-item-has-children"><a href="#">English</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                    <li class="menu-item-has-children"><a href="#">English</a><span class="sub-toggle"><i
+                                class="fa fa-chevron-down"></i></span>
                         <ul class="sub-menu">
                             <li><a href="#">Français</a></li>
                             <li><a href="#">Deutsch</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a href="#">USD</a><span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                    <li class="menu-item-has-children"><a href="#">USD</a><span class="sub-toggle"><i
+                                class="fa fa-chevron-down"></i></span>
                         <ul class="sub-menu">
                             <li><a href="#">USD</a></li>
                             <li><a href="#">EUR</a></li>
@@ -313,12 +301,14 @@ $result = mysqli_query($conn, $sql);
         </div>
     </div>
     <button class="btn scroll-top"><i class="fa fa-angle-double-up"></i></button>
-    <div class="modal fade" id="popupQuickview" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="popupQuickview" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered ps-quickview">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="wrap-modal-slider container-fluid ps-quickview__body">
-                        <button class="close ps-quickview__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button class="close ps-quickview__close" type="button" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="ps-product--detail">
                             <div class="row">
                                 <div class="col-12 col-xl-6">
@@ -332,26 +322,32 @@ $result = mysqli_query($conn, $sql);
                                         </div>
                                         <div class="ps-gallery--image">
                                             <div class="slide">
-                                                <div class="ps-gallery__item"><img src="img/products/001.jpg" alt="alt"></div>
+                                                <div class="ps-gallery__item"><img src="img/products/001.jpg" alt="alt">
+                                                </div>
                                             </div>
                                             <div class="slide">
-                                                <div class="ps-gallery__item"><img src="img/products/047.jpg" alt="alt"></div>
+                                                <div class="ps-gallery__item"><img src="img/products/047.jpg" alt="alt">
+                                                </div>
                                             </div>
                                             <div class="slide">
-                                                <div class="ps-gallery__item"><img src="img/products/047.jpg" alt="alt"></div>
+                                                <div class="ps-gallery__item"><img src="img/products/047.jpg" alt="alt">
+                                                </div>
                                             </div>
                                             <div class="slide">
-                                                <div class="ps-gallery__item"><img src="img/products/008.jpg" alt="alt"></div>
+                                                <div class="ps-gallery__item"><img src="img/products/008.jpg" alt="alt">
+                                                </div>
                                             </div>
                                             <div class="slide">
-                                                <div class="ps-gallery__item"><img src="img/products/034.jpg" alt="alt"></div>
+                                                <div class="ps-gallery__item"><img src="img/products/034.jpg" alt="alt">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-6">
                                     <div class="ps-product__info">
-                                        <div class="ps-product__badge"><span class="ps-badge ps-badge--instock"> IN STOCK</span>
+                                        <div class="ps-product__badge"><span class="ps-badge ps-badge--instock"> IN
+                                                STOCK</span>
                                         </div>
                                         <div class="ps-product__branch"><a href="#">HeartRate</a></div>
                                         <div class="ps-product__title"><a href="#">Blood Pressure Monitor</a></div>
@@ -377,17 +373,26 @@ $result = mysqli_query($conn, $sql);
                                             <h6>Quantity</h6>
                                             <div class="d-md-flex align-items-center">
                                                 <div class="def-number-input number-input safari_only">
-                                                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i class="icon-minus"></i></button>
-                                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="icon-plus"></i></button>
-                                                </div><a class="ps-btn ps-btn--warning" href="#" data-toggle="modal" data-target="#popupAddcartV2">Add to cart</a>
+                                                    <button class="minus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
+                                                            class="icon-minus"></i></button>
+                                                    <input class="quantity" min="0" name="quantity" value="1"
+                                                        type="number">
+                                                    <button class="plus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                                                            class="icon-plus"></i></button>
+                                                </div><a class="ps-btn ps-btn--warning" href="#" data-toggle="modal"
+                                                    data-target="#popupAddcartV2">Add to cart</a>
                                             </div>
                                         </div>
                                         <div class="ps-product__type">
                                             <ul class="ps-product__list">
-                                                <li> <span class="ps-list__title">Tags: </span><a class="ps-list__text" href="#">Health</a><a class="ps-list__text" href="#">Thermometer</a>
+                                                <li> <span class="ps-list__title">Tags: </span><a class="ps-list__text"
+                                                        href="#">Health</a><a class="ps-list__text"
+                                                        href="#">Thermometer</a>
                                                 </li>
-                                                <li> <span class="ps-list__title">SKU: </span><a class="ps-list__text" href="#">SF-006</a>
+                                                <li> <span class="ps-list__title">SKU: </span><a class="ps-list__text"
+                                                        href="#">SF-006</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -400,12 +405,14 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-    <div class="modal fade" id="popupCompare" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="popupCompare" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered ps-compare--popup">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="wrap-modal-slider ps-compare__body">
-                        <button class="close ps-compare__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button class="close ps-compare__close" type="button" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="ps-compare--product">
                             <div class="ps-compare__header">
                                 <div class="container">
@@ -419,25 +426,34 @@ $result = mysqli_query($conn, $sql);
                                             <tr>
                                                 <th></th>
                                                 <td>
-                                                    <div class="ps-product__remove"><a href="#"><i class="fa fa-times"></i></a></div>
-                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
+                                                    <div class="ps-product__remove"><a href="#"><i
+                                                                class="fa fa-times"></i></a></div>
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image"
+                                                            href="product1.html">
                                                             <figure><img src="img/products/001.jpg" alt=""></figure>
                                                         </a></div>
                                                     <div class="ps-product__content">
-                                                        <h5 class="ps-product__title"><a href="product1.html">Blood Pressure Monitor</a></h5>
-                                                        <div class="ps-product__meta"><span class="ps-product__price">$77.65</span>
+                                                        <h5 class="ps-product__title"><a href="product1.html">Blood
+                                                                Pressure Monitor</a></h5>
+                                                        <div class="ps-product__meta"><span
+                                                                class="ps-product__price">$77.65</span>
                                                         </div>
                                                         <button class="ps-btn ps-btn--warning">Add to cart</button>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="ps-product__remove"><a href="#"><i class="fa fa-times"></i></a></div>
-                                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
+                                                    <div class="ps-product__remove"><a href="#"><i
+                                                                class="fa fa-times"></i></a></div>
+                                                    <div class="ps-product__thumbnail"><a class="ps-product__image"
+                                                            href="product1.html">
                                                             <figure><img src="img/products/034.jpg" alt=""></figure>
                                                         </a></div>
                                                     <div class="ps-product__content">
-                                                        <h5 class="ps-product__title"><a href="product1.html">Blood Pressure Monitor Upper Arm</a></h5>
-                                                        <div class="ps-product__meta"><span class="ps-product__del">$64.65</span><span class="ps-product__price sale">$86.67</span>
+                                                        <h5 class="ps-product__title"><a href="product1.html">Blood
+                                                                Pressure Monitor Upper Arm</a></h5>
+                                                        <div class="ps-product__meta"><span
+                                                                class="ps-product__del">$64.65</span><span
+                                                                class="ps-product__price sale">$86.67</span>
                                                         </div>
                                                         <button class="ps-btn ps-btn--warning">Add to cart</button>
                                                     </div>
@@ -509,7 +525,8 @@ $result = mysqli_query($conn, $sql);
                                                 <th>Price</th>
                                                 <td><span class="ps-product__price">$77.65</span>
                                                 </td>
-                                                <td><span class="ps-product__del">$64.65</span><span class="ps-product__price sale">$86.67</span>
+                                                <td><span class="ps-product__del">$64.65</span><span
+                                                        class="ps-product__price sale">$86.67</span>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -526,17 +543,21 @@ $result = mysqli_query($conn, $sql);
         <div class="ps-preloader-section ps-preloader-left"></div>
         <div class="ps-preloader-section ps-preloader-right"></div>
     </div>
-    <div class="modal fade" id="popupLanguage" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="popupLanguage" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ps-popup--select">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="wrap-modal-slider container-fluid">
-                        <button class="close ps-popup__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button class="close ps-popup__close" type="button" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="ps-popup__body">
                             <h2 class="ps-popup__title">Select language</h2>
                             <ul class="ps-popup__list">
-                                <li class="language-item"> <a class="active btn" href="javascript:void(0);" data-value="English">English</a></li>
-                                <li class="language-item"> <a class="btn" href="javascript:void(0);" data-value="Deutsch">Deutsch</a></li>
+                                <li class="language-item"> <a class="active btn" href="javascript:void(0);"
+                                        data-value="English">English</a></li>
+                                <li class="language-item"> <a class="btn" href="javascript:void(0);"
+                                        data-value="Deutsch">Deutsch</a></li>
                             </ul>
                         </div>
                     </div>
@@ -544,18 +565,23 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-    <div class="modal fade" id="popupCurrency" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="popupCurrency" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ps-popup--select">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="wrap-modal-slider container-fluid">
-                        <button class="close ps-popup__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button class="close ps-popup__close" type="button" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="ps-popup__body">
                             <h2 class="ps-popup__title">Select currency</h2>
                             <ul class="ps-popup__list">
-                                <li class="currency-item"> <a class="active btn" href="javascript:void(0);" data-value="USD">USD</a></li>
-                                <li class="currency-item"> <a class="btn" href="javascript:void(0);" data-value="EUR">EUR</a></li>
-                                <li class="currency-item"> <a class="btn" href="javascript:void(0);" data-value="JPY">JPY</a></li>
+                                <li class="currency-item"> <a class="active btn" href="javascript:void(0);"
+                                        data-value="USD">USD</a></li>
+                                <li class="currency-item"> <a class="btn" href="javascript:void(0);"
+                                        data-value="EUR">EUR</a></li>
+                                <li class="currency-item"> <a class="btn" href="javascript:void(0);"
+                                        data-value="JPY">JPY</a></li>
                             </ul>
                         </div>
                     </div>
@@ -563,33 +589,49 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-    <div class="modal fade" id="popupAddcart" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="popupAddcart" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered ps-addcart">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="wrap-modal-slider container-fluid ps-addcart__body">
-                        <button class="close ps-addcart__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button class="close ps-addcart__close" type="button" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <p class="ps-addcart__noti"> <i class="fa fa-check"> </i>Added to cart succesfully</p>
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="ps-product ps-product--standard">
-                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                            <figure><img src="img/products/015.jpg" alt="alt"><img src="img/products/040.jpg" alt="alt">
+                                    <div class="ps-product__thumbnail"><a class="ps-product__image"
+                                            href="product1.html">
+                                            <figure><img src="img/products/015.jpg" alt="alt"><img
+                                                    src="img/products/040.jpg" alt="alt">
                                             </figure>
                                         </a>
                                         <div class="ps-product__actions">
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="#" data-toggle="modal" data-target="#popupCompare"><i class="fa fa-align-left"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view"><a href="#" data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#" data-toggle="modal" data-target="#popupAddcart"><i class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="#"
+                                                    data-toggle="modal" data-target="#popupCompare"><i
+                                                        class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Quick view"><a href="#" data-toggle="modal"
+                                                    data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Add to cart"><a href="#" data-toggle="modal"
+                                                    data-target="#popupAddcart"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
                                         </div>
                                         <div class="ps-product__badge">
                                             <div class="ps-badge ps-badge--sale">Sale</div>
                                         </div>
                                     </div>
                                     <div class="ps-product__content">
-                                        <h5 class="ps-product__title"><a href="product1.html">Lens Frame Professional Adjustable Multifunctional</a></h5>
-                                        <div class="ps-product__meta"><span class="ps-product__price sale">$89.65</span><span class="ps-product__del">$60.65</span>
+                                        <h5 class="ps-product__title"><a href="product1.html">Lens Frame Professional
+                                                Adjustable Multifunctional</a></h5>
+                                        <div class="ps-product__meta"><span
+                                                class="ps-product__price sale">$89.65</span><span
+                                                class="ps-product__del">$60.65</span>
                                         </div>
                                         <div class="ps-product__rating">
                                             <select class="ps-rating" data-read-only="true">
@@ -610,15 +652,28 @@ $result = mysqli_query($conn, $sql);
                                         <div class="ps-product__actions ps-product__group-mobile">
                                             <div class="ps-product__quantity">
                                                 <div class="def-number-input number-input safari_only">
-                                                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i class="icon-minus"></i></button>
-                                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="icon-plus"></i></button>
+                                                    <button class="minus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
+                                                            class="icon-minus"></i></button>
+                                                    <input class="quantity" min="0" name="quantity" value="1"
+                                                        type="number">
+                                                    <button class="plus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                                                            class="icon-plus"></i></button>
                                                 </div>
                                             </div>
-                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#" data-toggle="modal" data-target="#popupAddcart">Add to cart</a></div>
-                                            <div class="ps-product__item cart" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#"><i class="fa fa-shopping-basket"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="wishlist.html"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="compare.html"><i class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#"
+                                                    data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
+                                            </div>
+                                            <div class="ps-product__item cart" data-toggle="tooltip"
+                                                data-placement="left" title="Add to cart"><a href="#"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="wishlist.html"><i
+                                                        class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="compare.html"><i
+                                                        class="fa fa-align-left"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -626,7 +681,11 @@ $result = mysqli_query($conn, $sql);
                             <div class="col-12 col-md-6">
                                 <div class="ps-addcart__content">
                                     <p>There are two items in your cart.</p>
-                                    <p class="ps-addcart__total">Total: <span class="ps-price">$44.00</span></p><a class="ps-btn ps-btn--border" href="#" data-dismiss="modal" aria-label="Close">Continue shopping</a><a class="ps-btn ps-btn--border" href="shopping-cart.html">View cart</a><a class="ps-btn ps-btn--warning" href="checkout.html">Proceed to checkout</a>
+                                    <p class="ps-addcart__total">Total: <span class="ps-price">$44.00</span></p><a
+                                        class="ps-btn ps-btn--border" href="#" data-dismiss="modal"
+                                        aria-label="Close">Continue shopping</a><a class="ps-btn ps-btn--border"
+                                        href="shopping-cart.html">View cart</a><a class="ps-btn ps-btn--warning"
+                                        href="checkout.html">Proceed to checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -635,7 +694,8 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-    <div class="modal fade" id="popupAddcartV2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="popupAddcartV2" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered ps-addcart">
             <div class="modal-content">
                 <div class="modal-body">
@@ -643,15 +703,18 @@ $result = mysqli_query($conn, $sql);
                         <div class="ps-addcart__overlay">
                             <div class="ps-addcart__loading"></div>
                         </div>
-                        <button class="close ps-addcart__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button class="close ps-addcart__close" type="button" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <p class="ps-addcart__noti"> <i class="fa fa-check"> </i>Added to cart succesfully</p>
                         <div class="ps-addcart__product">
                             <div class="ps-product ps-product--standard">
                                 <div class="ps-product__thumbnail"><a class="ps-product__image" href="#">
-                                        <figure><img src="img/products/015.jpg" alt=""><img src="img/products/040.jpg" alt=""></figure>
+                                        <figure><img src="img/products/015.jpg" alt=""><img src="img/products/040.jpg"
+                                                alt=""></figure>
                                     </a></div>
                                 <div class="ps-product__content">
-                                    <div class="ps-product__title"><a>Lens Frame Professional Adjustable Multifunctional</a></div>
+                                    <div class="ps-product__title"><a>Lens Frame Professional Adjustable
+                                            Multifunctional</a></div>
                                     <div class="ps-product__quantity"><span>x2</span></div>
                                     <div class="ps-product__meta"><span class="ps-product__price">$89.65</span></div>
                                 </div>
@@ -662,25 +725,42 @@ $result = mysqli_query($conn, $sql);
                             <p>People who buy this product buy also:</p>
                         </div>
                         <div class="ps-addcart__content">
-                            <div class="owl-carousel" data-owl-auto="false" data-owl-loop="true" data-owl-speed="15000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="3" data-owl-item-xs="1" data-owl-item-sm="2" data-owl-item-md="2" data-owl-item-lg="3" data-owl-item-xl="3" data-owl-duration="1000" data-owl-mousedrag="on">
+                            <div class="owl-carousel" data-owl-auto="false" data-owl-loop="true" data-owl-speed="15000"
+                                data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="3"
+                                data-owl-item-xs="1" data-owl-item-sm="2" data-owl-item-md="2" data-owl-item-lg="3"
+                                data-owl-item-xl="3" data-owl-duration="1000" data-owl-mousedrag="on">
                                 <div class="ps-product ps-product--standard">
-                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                            <figure><img src="img/products/015.jpg" alt="alt"><img src="img/products/040.jpg" alt="alt">
+                                    <div class="ps-product__thumbnail"><a class="ps-product__image"
+                                            href="product1.html">
+                                            <figure><img src="img/products/015.jpg" alt="alt"><img
+                                                    src="img/products/040.jpg" alt="alt">
                                             </figure>
                                         </a>
                                         <div class="ps-product__actions">
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="#" data-toggle="modal" data-target="#popupCompare"><i class="fa fa-align-left"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view"><a href="#" data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#" data-toggle="modal" data-target="#popupAddcart"><i class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="#"
+                                                    data-toggle="modal" data-target="#popupCompare"><i
+                                                        class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Quick view"><a href="#" data-toggle="modal"
+                                                    data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Add to cart"><a href="#" data-toggle="modal"
+                                                    data-target="#popupAddcart"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
                                         </div>
                                         <div class="ps-product__badge">
                                             <div class="ps-badge ps-badge--sale">Sale</div>
                                         </div>
                                     </div>
                                     <div class="ps-product__content">
-                                        <h5 class="ps-product__title"><a href="product1.html">Lens Frame Professional Adjustable Multifunctional</a></h5>
-                                        <div class="ps-product__meta"><span class="ps-product__price sale">$89.65</span><span class="ps-product__del">$60.65</span>
+                                        <h5 class="ps-product__title"><a href="product1.html">Lens Frame Professional
+                                                Adjustable Multifunctional</a></h5>
+                                        <div class="ps-product__meta"><span
+                                                class="ps-product__price sale">$89.65</span><span
+                                                class="ps-product__del">$60.65</span>
                                         </div>
                                         <div class="ps-product__rating">
                                             <select class="ps-rating" data-read-only="true">
@@ -701,35 +781,62 @@ $result = mysqli_query($conn, $sql);
                                         <div class="ps-product__actions ps-product__group-mobile">
                                             <div class="ps-product__quantity">
                                                 <div class="def-number-input number-input safari_only">
-                                                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i class="icon-minus"></i></button>
-                                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="icon-plus"></i></button>
+                                                    <button class="minus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
+                                                            class="icon-minus"></i></button>
+                                                    <input class="quantity" min="0" name="quantity" value="1"
+                                                        type="number">
+                                                    <button class="plus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                                                            class="icon-plus"></i></button>
                                                 </div>
                                             </div>
-                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#" data-toggle="modal" data-target="#popupAddcart">Add to cart</a></div>
-                                            <div class="ps-product__item cart" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#"><i class="fa fa-shopping-basket"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="wishlist.html"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="compare.html"><i class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#"
+                                                    data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
+                                            </div>
+                                            <div class="ps-product__item cart" data-toggle="tooltip"
+                                                data-placement="left" title="Add to cart"><a href="#"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="wishlist.html"><i
+                                                        class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="compare.html"><i
+                                                        class="fa fa-align-left"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ps-product ps-product--standard">
-                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                            <figure><img src="img/products/028.jpg" alt="alt"><img src="img/products/045.jpg" alt="alt">
+                                    <div class="ps-product__thumbnail"><a class="ps-product__image"
+                                            href="product1.html">
+                                            <figure><img src="img/products/028.jpg" alt="alt"><img
+                                                    src="img/products/045.jpg" alt="alt">
                                             </figure>
                                         </a>
                                         <div class="ps-product__actions">
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="#" data-toggle="modal" data-target="#popupCompare"><i class="fa fa-align-left"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view"><a href="#" data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#" data-toggle="modal" data-target="#popupAddcart"><i class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="#"
+                                                    data-toggle="modal" data-target="#popupCompare"><i
+                                                        class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Quick view"><a href="#" data-toggle="modal"
+                                                    data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Add to cart"><a href="#" data-toggle="modal"
+                                                    data-target="#popupAddcart"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
                                         </div>
                                         <div class="ps-product__badge">
                                         </div>
                                     </div>
                                     <div class="ps-product__content">
-                                        <h5 class="ps-product__title"><a href="product1.html">Digital Thermometer X30-Pro</a></h5>
-                                        <div class="ps-product__meta"><span class="ps-product__price sale">$60.39</span><span class="ps-product__del">$89.99</span>
+                                        <h5 class="ps-product__title"><a href="product1.html">Digital Thermometer
+                                                X30-Pro</a></h5>
+                                        <div class="ps-product__meta"><span
+                                                class="ps-product__price sale">$60.39</span><span
+                                                class="ps-product__del">$89.99</span>
                                         </div>
                                         <div class="ps-product__rating">
                                             <select class="ps-rating" data-read-only="true">
@@ -750,36 +857,62 @@ $result = mysqli_query($conn, $sql);
                                         <div class="ps-product__actions ps-product__group-mobile">
                                             <div class="ps-product__quantity">
                                                 <div class="def-number-input number-input safari_only">
-                                                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i class="icon-minus"></i></button>
-                                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="icon-plus"></i></button>
+                                                    <button class="minus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
+                                                            class="icon-minus"></i></button>
+                                                    <input class="quantity" min="0" name="quantity" value="1"
+                                                        type="number">
+                                                    <button class="plus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                                                            class="icon-plus"></i></button>
                                                 </div>
                                             </div>
-                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#" data-toggle="modal" data-target="#popupAddcart">Add to cart</a></div>
-                                            <div class="ps-product__item cart" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#"><i class="fa fa-shopping-basket"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="wishlist.html"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="compare.html"><i class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#"
+                                                    data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
+                                            </div>
+                                            <div class="ps-product__item cart" data-toggle="tooltip"
+                                                data-placement="left" title="Add to cart"><a href="#"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="wishlist.html"><i
+                                                        class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="compare.html"><i
+                                                        class="fa fa-align-left"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ps-product ps-product--standard">
-                                    <div class="ps-product__thumbnail"><a class="ps-product__image" href="product1.html">
-                                            <figure><img src="img/products/020.jpg" alt="alt"><img src="img/products/008.jpg" alt="alt">
+                                    <div class="ps-product__thumbnail"><a class="ps-product__image"
+                                            href="product1.html">
+                                            <figure><img src="img/products/020.jpg" alt="alt"><img
+                                                    src="img/products/008.jpg" alt="alt">
                                             </figure>
                                         </a>
                                         <div class="ps-product__actions">
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="#" data-toggle="modal" data-target="#popupCompare"><i class="fa fa-align-left"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view"><a href="#" data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#" data-toggle="modal" data-target="#popupAddcart"><i class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="#"
+                                                    data-toggle="modal" data-target="#popupCompare"><i
+                                                        class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Quick view"><a href="#" data-toggle="modal"
+                                                    data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Add to cart"><a href="#" data-toggle="modal"
+                                                    data-target="#popupAddcart"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
                                         </div>
                                         <div class="ps-product__badge">
                                             <div class="ps-badge ps-badge--hot">Hot</div>
                                         </div>
                                     </div>
                                     <div class="ps-product__content">
-                                        <h5 class="ps-product__title"><a href="product1.html">Bronze Blood Pressure Monitor</a></h5>
-                                        <div class="ps-product__meta"><span class="ps-product__price">$56.65 - $97.65</span>
+                                        <h5 class="ps-product__title"><a href="product1.html">Bronze Blood Pressure
+                                                Monitor</a></h5>
+                                        <div class="ps-product__meta"><span class="ps-product__price">$56.65 -
+                                                $97.65</span>
                                         </div>
                                         <div class="ps-product__rating">
                                             <select class="ps-rating" data-read-only="true">
@@ -800,27 +933,43 @@ $result = mysqli_query($conn, $sql);
                                         <div class="ps-product__actions ps-product__group-mobile">
                                             <div class="ps-product__quantity">
                                                 <div class="def-number-input number-input safari_only">
-                                                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i class="icon-minus"></i></button>
-                                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="icon-plus"></i></button>
+                                                    <button class="minus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
+                                                            class="icon-minus"></i></button>
+                                                    <input class="quantity" min="0" name="quantity" value="1"
+                                                        type="number">
+                                                    <button class="plus"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                                                            class="icon-plus"></i></button>
                                                 </div>
                                             </div>
-                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#" data-toggle="modal" data-target="#popupAddcart">Add to cart</a></div>
-                                            <div class="ps-product__item cart" data-toggle="tooltip" data-placement="left" title="Add to cart"><a href="#"><i class="fa fa-shopping-basket"></i></a></div>
-                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist"><a href="wishlist.html"><i class="fa fa-heart-o"></i></a></div>
-                                            <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left" title="Add to compare"><a href="compare.html"><i class="fa fa-align-left"></i></a></div>
+                                            <div class="ps-product__cart"> <a class="ps-btn ps-btn--warning" href="#"
+                                                    data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
+                                            </div>
+                                            <div class="ps-product__item cart" data-toggle="tooltip"
+                                                data-placement="left" title="Add to cart"><a href="#"><i
+                                                        class="fa fa-shopping-basket"></i></a></div>
+                                            <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
+                                                title="Wishlist"><a href="wishlist.html"><i
+                                                        class="fa fa-heart-o"></i></a></div>
+                                            <div class="ps-product__item rotate" data-toggle="tooltip"
+                                                data-placement="left" title="Add to compare"><a href="compare.html"><i
+                                                        class="fa fa-align-left"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ps-addcart__footer"><a class="ps-btn ps-btn--border" href="#" data-dismiss="modal" aria-label="Close">No thanks :(</a><a class="ps-btn ps-btn--warning" href="shopping-cart.html">Continue to Cart</a></div>
+                        <div class="ps-addcart__footer"><a class="ps-btn ps-btn--border" href="#" data-dismiss="modal"
+                                aria-label="Close">No thanks :(</a><a class="ps-btn ps-btn--warning"
+                                href="shopping-cart.html">Continue to Cart</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="plugins/jquery.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="plugins/jquery.min.js"></script>
     <script src="plugins/popper.min.js"></script>
     <script src="plugins/bootstrap4/js/bootstrap.min.js"></script>
     <script src="plugins/select2/dist/js/select2.full.min.js"></script>

@@ -34,10 +34,10 @@
                             <li><a class="ps-header__item" href="#" id="login-modal"><i class="icon-user"></i></a>
                                 <div class="ps-login--modal">
 
-                                  <a href="" class="ps-btn ps-btn--warning mb-2">Log In</a>
-                                  <a href="register.php" class="ps-btn bg-info">Register</a>
-                                  <a href="my-account.php">MY Account</a>
-                                  <a href="">Logout</a>
+                                  <a href="login.php" class="ps-btn ps-btn--warning mb-2">Log In</a>
+                                  <a href="register.php" class="ps-btn bg-info mb-2">Register</a>
+                                  <a href="my-account.php" class="ps-btn ps-btn--primary mb-2">MY Account</a>
+                                  <a href="logout.php" class="ps-btn ps-btn--success">Logout</a>
 
                                       
                                         

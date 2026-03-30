@@ -22,15 +22,21 @@ if(mysqli_num_rows($result)> 0){
 $sql = "INSERT INTO users(full_name , email , password , country , phone)
 VALUES('$full_name' , '$email' , '$password' , '$country' , '$phone')";
 
-if(mysqli_query($conn,$sql)){
-    echo "Data Register Successfully.";
-    // header("Location: ../my-account.php");
 
-}else{
-    echo "Data Failed!";
+
+    if(mysqli_query($conn, $sql)){
+        header("Location: ../my-account.php");
+    } else {
+        echo "Data Failed!";
+    }
 }
-
-}
-
-
 ?>
+
+
+
+
+
+
+
+
+

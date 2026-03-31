@@ -8,6 +8,7 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $country = $_POST['country'];
 $phone = $_POST['phone'];
+$hash_password = password_hash($password, PASSWORD_DEFAULT);
 
 
 // echo $full_name; we can do this when we have to find an error
@@ -20,7 +21,7 @@ if(mysqli_num_rows($result)> 0){
 }else{
 
 $sql = "INSERT INTO users(full_name , email , password , country , phone)
-VALUES('$full_name' , '$email' , '$password' , '$country' , '$phone')";
+VALUES('$full_name' , '$email' , '$hash_password' , '$country' , '$phone')";
 
 
 

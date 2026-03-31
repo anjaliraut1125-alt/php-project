@@ -39,10 +39,10 @@
 
         <div class="ps-contact">
             <div class="container">
-                <ul class="ps-breadcrumb">
+                <!-- <ul class="ps-breadcrumb">
                     <li class="ps-breadcrumb__item"><a href="index.php">Home</a></li>
                     <li class="ps-breadcrumb__item active" aria-current="page"><a href="register.php">Register Form</li>
-                </ul>
+                </ul> -->
 
                 <div class="row d-flex justify-content-center ">
                     <div class="col-6 ">

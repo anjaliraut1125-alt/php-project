@@ -40,19 +40,18 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-6">
-                        <form action="do_action" method="post">
+                        <form action="controlers/login.php" method="post">
                             <div class="ps-form--review border border-dark p-4 rounded">
                                 <h2 class="ps-form__title">Login Form</b></h2>
                                 <div class="ps-form__group">
                                     <label class="ps-form__label"> Email </label>
-                                    <input class="form-control ps-form__input" type="email"
+                                    <input class="form-control ps-form__input" type="email" name="email"
                                         placeholder="Enter Your Email">
                                 </div>
                                 <div class="ps-form__group">
                                     <label class="ps-form__label">Password </label>
                                     <div class="input-group">
-                                        <input class="form-control ps-form__input" type="password"
-                                            placeholder="Enter Your password">
+                                        <input class="form-control ps-form__input" type="password" name="password" placeholder="Enter Your password">
                                         <div class="input-group-append"><a class="fa fa-eye-slash toogle-password"
                                                 href="javascript: vois(0);"></a></div>
                                     </div>

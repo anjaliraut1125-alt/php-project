@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form IN PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color:lightblue;
+        }
+    </style>
 </head>
 
 <body>
     <div class="main-div">
-        <div class="conainer">
+        <div class="container">
 
             <div class="row d-flex justify-content-center">
                 <div class="col-6">
-                    <form action="curd-practice/form.php" methood="POST">
-                        <div class="contact-form border border-dark p-3 rounded mt-5" >
-                            <h2>Simple Contact Form!</h2>
+                    <form action="../controlers/curd.php" method="post" class="bg-light p-3 rounded" >
+                        <div class="contact-form border border-dark p-3 rounded mt-5 table table-success" >
+                            <h2><u>Simple Contact Form!</u></h2>
 
                            <div class="row">
                                 <div class="col-12 col-md-12 mt-5">
@@ -44,7 +49,7 @@
                                         <div class="ps-form__group">
                                                <label class="ps-form__label mb-3 text-dark">Enter City </label>
                                                <!-- <input class="form-control bg-white text-dark" type="text" placeholder="Full Name" name="full_name"> -->
-                                                <select class="form-control ps-form__input" name="country">
+                                                <select class="form-control ps-form__input" name="city">
                                                 <option value=""></option>
                                                 <option value="Delhi">Delhi</option>
                                                 <option value="Goa">Goa</option>
@@ -69,9 +74,13 @@
 
                             </div>
 
-                            <div class="ps-form__submit d-flex justify-content-center">
-                                    <button class="ps-btn  bg-primary text-white">Submit</button>
+                            <div class="ps-form__submit d-flex justify-content-center mt-5 gap-3">
+                                    <button type="submit" class="ps-btn  bg-primary text-white">Submit</button>
+                                    <button type="delete" class="ps-btn  bg-primary text-white">Delete</button>
+
                              </div>
+
+                             
 
                         </div>
                         

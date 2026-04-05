@@ -25,3 +25,8 @@ if(mysqli_query($conn,$sql)){
 
 
 ?>
+
+
+
+<!-- display data -->
+

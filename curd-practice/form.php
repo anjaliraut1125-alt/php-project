@@ -1,3 +1,16 @@
+<?php
+include "../includes/config.php";
+// include("includes/config.php");
+
+$sql = "SELECT * FROM curd";
+$result = mysqli_query($conn , $sql);
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +36,12 @@
                         <div class="contact-form border border-dark p-3 rounded mt-5 table table-success" >
                             <h2><u>Simple Contact Form!</u></h2>
 
+                           
                            <div class="row">
                                 <div class="col-12 col-md-12 mt-5">
                                         <div class="ps-form__group">
                                                <label class="ps-form__label mb-3 text-dark">Name </label>
-                                               <input class="form-control bg-white text-dark" type="text"  name="full_name">
+                                               <input class="form-control bg-white text-dark" type="text"  name="full_name" >
                                         </div>
                                 </div>
 
@@ -49,7 +63,7 @@
                                         <div class="ps-form__group">
                                                <label class="ps-form__label mb-3 text-dark">Enter City </label>
                                                <!-- <input class="form-control bg-white text-dark" type="text" placeholder="Full Name" name="full_name"> -->
-                                                <select class="form-control ps-form__input" name="city">
+                                                <select class="form-control ps-form__input" name="city">          
                                                 <option value=""></option>
                                                 <option value="Delhi">Delhi</option>
                                                 <option value="Goa">Goa</option>
@@ -74,11 +88,14 @@
 
                             </div>
 
-                            <div class="ps-form__submit d-flex justify-content-center mt-5 gap-3">
-                                    <button type="submit" class="ps-btn  bg-primary text-white">Submit</button>
-                                    <button type="delete" class="ps-btn  bg-primary text-white">Delete</button>
+                              
+                              
 
-                             </div>
+                            <div class="ps-form__submit d-flex justify-content-center mt-5 gap-3">
+                                <button type="submit" class="ps-btn  bg-primary text-white">Submit</button>
+                                <button type="button" class="ps-btn  bg-primary text-white">Delete</button>
+
+                            </div>
 
                              
 

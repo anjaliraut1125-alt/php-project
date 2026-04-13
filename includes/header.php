@@ -34,11 +34,26 @@
                             <li><a class="ps-header__item" href="#" id="login-modal"><i class="icon-user"></i></a>
                                 <div class="ps-login--modal">
 
-                                  <a href="login.php" class="ps-btn ps-btn--warning mb-2">Log In</a>
-                                  <a href="register.php" class="ps-btn bg-info mb-2">Register</a>
-                                  <a href="my-account.php" class="ps-btn ps-btn--primary mb-2">MY Account</a>
-                                  <a href="logout.php" class="ps-btn ps-btn--success">Logout</a>
+                                    <?php
 
+                                    if(!isset($_SESSION['user_id'])) {
+                                     
+                                    ?>
+                                        <a href="login.php" class="ps-btn ps-btn--warning mb-2">Log In</a>
+                                        <a href="register.php" class="ps-btn bg-info mb-2">Register</a>
+
+                                    <?php    
+                                    } else {
+                                    ?> 
+                                        <a href="my-account.php" class="ps-btn ps-btn--primary mb-2">MY Account</a>
+                                        <a href="controlers/logout.php" class="ps-btn ps-btn--success">Logout</a>
+                                    <?php        
+
+                                    }
+                                    ?>    
+
+                                  
+                                 
                                       
                                         
                                    

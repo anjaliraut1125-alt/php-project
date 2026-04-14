@@ -2,9 +2,6 @@
 include "../includes/config.php";
 // include("includes/config.php");
 
-$sql = "SELECT * FROM curd";
-$result = mysqli_query($conn , $sql);
-
 ?>
 
 
@@ -41,7 +38,7 @@ $result = mysqli_query($conn , $sql);
                                 <div class="col-12 col-md-12 mt-5">
                                         <div class="ps-form__group">
                                                <label class="ps-form__label mb-3 text-dark">Name </label>
-                                               <input class="form-control bg-white text-dark" type="text"  name="full_name" >
+                                               <input class="form-control bg-white text-dark" type="text"  name="name" >
                                         </div>
                                 </div>
 
@@ -101,6 +98,7 @@ $result = mysqli_query($conn , $sql);
 
                         </div>
                         
+                          
                         
                     </form>
                 </div>
